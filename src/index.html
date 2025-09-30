@@ -6,6 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Bangers|Titillium+Web" rel="stylesheet">
+  <link rel="stylesheet" href="/src/less/index.less">
   <title>Ergineer Homeworks!</title>
 </head>
 
@@ -77,9 +78,19 @@
   </div><!-- container -->
 
   <footer class="footer">
-    <p>Copyright Eğlence Otobüsü 2022</p>
-  </footer>
-
+      <form>
+        <input
+          type="text"
+          name="full_name"
+          value=""
+          placeholder="Adınız ve Soyadınız"
+        />
+        <button type="submit" disabled="true">Kaydet</button>
+      </form>
+      <p>Eğlence Otobüsü Copyright@2022</p>
+      <p id="submitResult">Click</p>
+    </footer>
+  <script src="index.js"></script>
 </body>
 
 </html>
