@@ -78,3 +78,15 @@ a.forEach((item)=>{
         item.classList.remove("underline");
     });
 })
+
+
+const altButton = document.querySelector("#scrollToTopBtn");
+const scroll = 300;
+window.addEventListener("scroll",(e)=>{
+    e.preventDefault();
+    if(document.documentElement.scrollTop > scroll){
+        altButton.style.display="block";
+    }else{
+        altButton.style.display="none";
+    }
+})
