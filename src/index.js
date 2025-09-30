@@ -47,6 +47,16 @@ input.addEventListener('input', (e) => {
   e.preventDefault();
 });
 
+input.addEventListener("focus",(e)=>{
+    e.preventDefault();
+    input.classList.add("inputBorder")
+})
+input.addEventListener("blur",(e)=>{
+    e.preventDefault();
+    input.classList.remove("inputBorder")
+})
+
+
 const prap = document.querySelector('#submitResult');
 const form = document.querySelector('form');
 form.addEventListener('submit', (e) => {
