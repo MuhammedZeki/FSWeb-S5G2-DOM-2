@@ -57,3 +57,14 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
 });
 
+const a = document.querySelectorAll(".nav-link");
+a.forEach((item)=>{
+    item.addEventListener("mouseenter",(e)=>{
+        e.preventDefault();
+        item.classList.add("underline");
+    })
+    item.addEventListener("mouseleave", (e) => {
+        e.preventDefault();
+        item.classList.remove("underline");
+    });
+})
