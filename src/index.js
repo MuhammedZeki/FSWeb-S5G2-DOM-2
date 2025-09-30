@@ -47,3 +47,13 @@ input.addEventListener('input', (e) => {
   e.preventDefault();
 });
 
+const prap = document.querySelector('#submitResult');
+const form = document.querySelector('form');
+form.addEventListener('submit', (e) => {
+  const msg = input.value;
+  prap.textContent = `${msg} başarı ile kaydedildi...`;
+  input.value = '';
+  button.disabled = true;
+  e.preventDefault();
+});
+
