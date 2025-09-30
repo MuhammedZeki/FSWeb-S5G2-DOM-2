@@ -90,3 +90,13 @@ window.addEventListener("scroll",(e)=>{
         altButton.style.display="none";
     }
 })
+
+
+const welcomeMsg = document.querySelector("#welcomeMessage");
+
+window.addEventListener("load",()=>{
+    welcomeMsg.classList.add("visible-message");
+    setTimeout(()=>{
+        welcomeMsg.classList.remove("visible-message");        
+    },3000)
+});
