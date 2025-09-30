@@ -35,3 +35,15 @@ window.addEventListener('keydown', (e) => {
   }
 });
 
+const button = document.querySelector('form button');
+const input = document.querySelector('form input');
+
+input.addEventListener('input', (e) => {
+  e.target.value = e.target.value.toUpperCase();
+  e.target.value.length < 5
+    ? (button.disabled = true)
+    : (button.disabled = false);
+
+  e.preventDefault();
+});
+
