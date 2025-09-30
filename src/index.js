@@ -35,36 +35,3 @@ window.addEventListener('keydown', (e) => {
   }
 });
 
-const button = document.querySelector('form button');
-const input = document.querySelector('form input');
-
-input.addEventListener('input', (e) => {
-  e.target.value = e.target.value.toUpperCase();
-  e.target.value.length < 5
-    ? (button.disabled = true)
-    : (button.disabled = false);
-
-  e.preventDefault();
-});
-
-const prap = document.querySelector('#submitResult');
-const form = document.querySelector('form');
-form.addEventListener('submit', (e) => {
-  const msg = input.value;
-  prap.textContent = `${msg} başarı ile kaydedildi...`;
-  input.value = '';
-  button.disabled = true;
-  e.preventDefault();
-});
-
-const a = document.querySelectorAll(".nav a");
-a.forEach((item)=>{
-    item.addEventListener("mouseenter",(e)=>{
-        e.preventDefault();
-        item.classList.add("underline");
-    })
-    item.addEventListener("mouseleave", (e) => {
-        e.preventDefault();
-        item.classList.remove("underline");
-    });
-})
